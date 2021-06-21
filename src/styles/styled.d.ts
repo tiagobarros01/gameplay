@@ -6,6 +6,13 @@ declare module 'styled-components/native' {
 
     colors: {
       background: string;
+
+      title: string;
+
+      line: string;
+
+      red: string;
+
     };
   }
 }
