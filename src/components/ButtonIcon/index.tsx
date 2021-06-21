@@ -1,17 +1,23 @@
 import React from 'react';
+import { TouchableOpacityProps } from 'react-native';
 
 import DiscordImg from '../../assets/discord.png';
 import {
   Wrapper, IconContainer, Icon, Info,
 } from './style';
 
-export function ButtonIcon(): JSX.Element {
+interface Props extends TouchableOpacityProps {
+  title: string;
+  opacity: number;
+}
+
+export function ButtonIcon({ title, opacity, ...rest }: Props): JSX.Element {
   return (
-    <Wrapper>
+    <Wrapper activeOpacity={opacity} {...rest}>
       <IconContainer>
         <Icon source={DiscordImg} />
       </IconContainer>
-      <Info>Enter with Discord</Info>
+      <Info>{title}</Info>
     </Wrapper>
   );
 }
