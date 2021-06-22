@@ -6,7 +6,6 @@ export const Wrapper = styled.View`
   justify-content: center;
   align-items: center;
 
-  background: ${({ theme }) => theme.colors.gradients.gradient100};
 `;
 
 export const Image = styled.Image`
