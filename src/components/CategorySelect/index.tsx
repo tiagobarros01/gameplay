@@ -8,9 +8,10 @@ import {
 
 interface Props {
   categorySelected: string;
+  setCategory: (categoryId: string) => void;
 }
 
-export function CategorySelect({ categorySelected }: Props): JSX.Element {
+export function CategorySelect({ categorySelected, setCategory }: Props): JSX.Element {
   return (
     <Container
       horizontal
@@ -24,6 +25,7 @@ export function CategorySelect({ categorySelected }: Props): JSX.Element {
             icon={category.icon}
             title={category.title}
             checked={category.id === categorySelected}
+            onPress={() => setCategory(category.id)}
           />
         ))
       }
