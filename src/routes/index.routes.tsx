@@ -12,8 +12,8 @@ export function Routes(): JSX.Element {
     <ThemeProvider theme={DefaultTheme}>
       <NavigationContainer>
         <Background>
-          <StackRoutes />
           <StatusBar barStyle="light-content" translucent backgroundColor="#fff" />
+          <StackRoutes />
         </Background>
       </NavigationContainer>
     </ThemeProvider>

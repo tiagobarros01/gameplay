@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 
 import IllustrationImg from '../../assets/illustration.png';
@@ -7,6 +8,12 @@ import {
 } from './style';
 
 export default function SignIn(): JSX.Element {
+  const navigation = useNavigation();
+
+  function handleSignIn() {
+    navigation.navigate('Home');
+  }
+
   return (
     <Wrapper>
       <Image source={IllustrationImg} resizeMode="stretch" />
@@ -23,7 +30,7 @@ export default function SignIn(): JSX.Element {
           {'\n'}
           with your friends
         </Details>
-        <ButtonIcon title="Enter with Discord" opacity={0.6} />
+        <ButtonIcon onPress={handleSignIn} title="Enter with Discord" />
       </Container>
     </Wrapper>
   );
