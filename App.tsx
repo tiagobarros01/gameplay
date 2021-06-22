@@ -8,7 +8,7 @@ import { StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 
 import { Background } from './src/components/Background';
-import SignIn from './src/screens/SignIn';
+import Home from './src/screens/Home';
 import DefaultTheme from './src/styles/themes/DefaultTheme';
 
 const App = (): JSX.Element => {
@@ -26,7 +26,7 @@ const App = (): JSX.Element => {
   return (
     <ThemeProvider theme={DefaultTheme}>
       <Background>
-        <SignIn />
+        <Home />
         <StatusBar barStyle="light-content" translucent backgroundColor="#fff" />
       </Background>
     </ThemeProvider>
