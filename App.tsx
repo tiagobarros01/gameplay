@@ -4,12 +4,8 @@ import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhan
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import React from 'react';
-import { StatusBar } from 'react-native';
-import { ThemeProvider } from 'styled-components';
 
-import { Background } from './src/components/Background';
-import Home from './src/screens/Home';
-import DefaultTheme from './src/styles/themes/DefaultTheme';
+import { Routes } from './src/routes/index.routes';
 
 const App = (): JSX.Element => {
   const [fontsLoaded] = useFonts({
@@ -20,17 +16,10 @@ const App = (): JSX.Element => {
   });
 
   if (!fontsLoaded) {
-    <AppLoading />;
+    return <AppLoading />;
   }
 
-  return (
-    <ThemeProvider theme={DefaultTheme}>
-      <Background>
-        <Home />
-        <StatusBar barStyle="light-content" translucent backgroundColor="#fff" />
-      </Background>
-    </ThemeProvider>
-  );
+  return <Routes />;
 };
 
 export default App;
