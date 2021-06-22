@@ -6,11 +6,11 @@ module.exports = (async () => {
   } = await getDefaultConfig(__dirname);
   return {
     transformer: {
-      babelTransformerPath: require.resolve("react-native-svg-transformer"),
+      babelTransformerPath: require.resolve("react-native-svg-transformer")
     },
     resolver: {
-      assetsExts: assetsExts.filter(ext => ext !== "svg"),
+      assetExts: assetExts.filter(ext => ext !== "svg"),
       sourceExts: [...sourceExts, "svg"]
     }
-  }
+  };
 })();
