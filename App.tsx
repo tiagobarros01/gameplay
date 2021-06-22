@@ -4,6 +4,7 @@ import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhan
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import React from 'react';
+import { StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 
 import SignIn from './src/screens/SignIn/index';
@@ -23,6 +24,7 @@ const App = (): JSX.Element => {
 
   return (
     <ThemeProvider theme={DefaultTheme}>
+      <StatusBar barStyle="light-content" translucent backgroundColor="#fff" />
       <SignIn />
     </ThemeProvider>
   );

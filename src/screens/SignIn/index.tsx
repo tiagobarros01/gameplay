@@ -1,5 +1,4 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
 
 import IllustrationImg from '../../assets/illustration.png';
 import { ButtonIcon } from '../../components/ButtonIcon';
@@ -10,11 +9,6 @@ import {
 export default function SignIn(): JSX.Element {
   return (
     <Wrapper>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="transparent"
-        translucent
-      />
       <Image source={IllustrationImg} resizeMode="stretch" />
       <Container>
         <Title>
