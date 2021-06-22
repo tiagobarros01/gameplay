@@ -18,11 +18,11 @@ export default function SignIn(): JSX.Element {
       <Image source={IllustrationImg} resizeMode="stretch" />
       <Container>
         <Title>
-          Organize
+          Connect
           {'\n'}
-          your games
+          and organize your
           {'\n'}
-          easily
+          games
         </Title>
         <Details>
           Create groups to pay your favorites games
