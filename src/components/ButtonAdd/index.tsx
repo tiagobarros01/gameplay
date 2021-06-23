@@ -5,7 +5,7 @@ import DefaultTheme from '../../styles/themes/DefaultTheme';
 import {
   Container,
   Icon,
-} from './styles';
+} from './style';
 
 export function ButtonAdd({ ...rest }: RectButtonProps): JSX.Element {
   return (
