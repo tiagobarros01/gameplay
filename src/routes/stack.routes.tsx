@@ -1,6 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 
+import { AppointmentDetails } from '../screens/AppointmentDetails';
 import Home from '../screens/Home';
 import SignIn from '../screens/SignIn';
 import DefaultTheme from '../styles/themes/DefaultTheme';
@@ -18,6 +19,7 @@ const AppRoutes = (): JSX.Element => (
   >
     <StackRoutes.Screen name="SignIn" component={SignIn} />
     <StackRoutes.Screen name="Home" component={Home} />
+    <StackRoutes.Screen name="AppointmentDetails" component={AppointmentDetails} />
   </StackRoutes.Navigator>
 );
 
