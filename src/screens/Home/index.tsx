@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-expressions */
+import { useNavigation } from '@react-navigation/core';
 import React, { useState } from 'react';
 import { FlatList, View } from 'react-native';
 
@@ -15,9 +16,14 @@ import {
 
 export default function Home(): JSX.Element {
   const [category, setCategory] = useState<string>('');
+  const { navigate } = useNavigation();
 
   function handleCategorySelect(categoryId: string) {
     categoryId === category ? setCategory('') : setCategory(categoryId);
+  }
+
+  function handleAppointmentDetails() {
+    navigate('AppointmentDetails');
   }
 
   return (
@@ -36,7 +42,10 @@ export default function Home(): JSX.Element {
             data={appointments}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <Appointment data={item} />
+              <Appointment
+                data={item}
+                onPress={handleAppointmentDetails}
+              />
             )}
             ItemSeparatorComponent={() => <Divider />}
             style={styles.matches}

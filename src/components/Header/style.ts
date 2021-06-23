@@ -6,7 +6,7 @@ export const Container = styled(LinearGradient)`
   width: 100%;
   height: 104px;
 
-  padding: ${getStatusBarHeight()} 24px 0 24px;
+  padding: ${getStatusBarHeight()}px 24px 0 24px;
 
   flex-direction: row;
   align-items: center;
