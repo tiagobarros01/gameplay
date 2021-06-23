@@ -2,6 +2,8 @@ import { StyleSheet } from 'react-native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import styled from 'styled-components/native';
 
+import { Background } from '../../components/Background';
+
 export const styles = StyleSheet.create({
   matches: {
     marginTop: 24,
@@ -9,7 +11,7 @@ export const styles = StyleSheet.create({
   },
 });
 
-export const Container = styled.View`
+export const Container = styled(Background)`
   flex: 1;
 `;
 

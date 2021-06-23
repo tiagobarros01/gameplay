@@ -3,6 +3,7 @@ import React from 'react';
 
 import Home from '../screens/Home';
 import SignIn from '../screens/SignIn';
+import DefaultTheme from '../styles/themes/DefaultTheme';
 
 const StackRoutes = createStackNavigator();
 
@@ -11,7 +12,7 @@ const AppRoutes = (): JSX.Element => (
     headerMode="none"
     screenOptions={{
       cardStyle: {
-        backgroundColor: 'transparent',
+        backgroundColor: DefaultTheme.colors.gradients.gradient100,
       },
     }}
   >
