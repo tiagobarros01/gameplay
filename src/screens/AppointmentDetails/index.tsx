@@ -6,13 +6,14 @@ import { BorderlessButton } from 'react-native-gesture-handler';
 import { MembersData } from '../../@types/MembersData';
 import BannerImg from '../../assets/banner.png';
 import { Background } from '../../components/Background';
+import { ButtonIcon } from '../../components/ButtonIcon';
 import { Divider } from '../../components/Divider';
 import { Header } from '../../components/Header';
 import { ListHeader } from '../../components/ListHeader';
 import { Member } from '../../components/Member';
 import DefaultTheme from '../../styles/themes/DefaultTheme';
 import {
-  BannerContent, Banner, Title, Details, styles,
+  BannerContent, Banner, Title, Details, styles, Footer,
 } from './style';
 
 export function AppointmentDetails (): JSX.Element {
@@ -69,6 +70,9 @@ export function AppointmentDetails (): JSX.Element {
         ItemSeparatorComponent={() => <Divider />}
         style={styles.members}
       />
+      <Footer>
+        <ButtonIcon title="join the match" />
+      </Footer>
     </Background>
   );
 }
