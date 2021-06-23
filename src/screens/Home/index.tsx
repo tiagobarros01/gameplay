@@ -26,11 +26,15 @@ export default function Home(): JSX.Element {
     navigate('AppointmentDetails');
   }
 
+  function handleAppointmentCreate() {
+    navigate('AppointmentCreate');
+  }
+
   return (
     <Container>
       <Header>
         <Profile />
-        <ButtonAdd />
+        <ButtonAdd onPress={handleAppointmentCreate} />
       </Header>
       <View>
         <CategorySelect setCategory={handleCategorySelect} categorySelected={category} />

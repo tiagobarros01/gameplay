@@ -1,6 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 
+import { AppointmentCreate } from '../screens/AppointmentCreate';
 import { AppointmentDetails } from '../screens/AppointmentDetails';
 import Home from '../screens/Home';
 import SignIn from '../screens/SignIn';
@@ -20,6 +21,7 @@ const AppRoutes = (): JSX.Element => (
     <StackRoutes.Screen name="SignIn" component={SignIn} />
     <StackRoutes.Screen name="Home" component={Home} />
     <StackRoutes.Screen name="AppointmentDetails" component={AppointmentDetails} />
+    <StackRoutes.Screen name="AppointmentCreate" component={AppointmentCreate} />
   </StackRoutes.Navigator>
 );
 
