@@ -33,7 +33,7 @@ export function Category({
           colors={[
             checked ? gradients.gradient85 : gradients.gradient50, gradients.gradient40,
           ]}
-          style={{ opacity: checked ? 1 : 0.4 }}
+          checked={checked}
         >
           { hasCheckBox && <Card checked={checked} /> }
           <Icon width={48} height={48} />

@@ -5,7 +5,7 @@ import { View } from 'react-native';
 import { MembersData } from '../../@types/MembersData';
 import { Avatar } from '../Avatar';
 import {
-  Container, Title, Status, Info,
+  Container, Title, Status, Info, Bullet,
 } from './style';
 
 type Props = {
@@ -25,6 +25,7 @@ export function Member({ data: { avatar_url, status, username } }: Props): JSX.E
           {username}
         </Title>
         <Status>
+          <Bullet isOnline={isOnline} />
           <Info>
             { isOnline ? 'Available' : 'Busy' }
           </Info>

@@ -16,7 +16,7 @@ export const Gradient = styled(LinearGradient)`
   margin-right: 8px;
 `;
 
-export const CardContainer = styled(LinearGradient)`
+export const CardContainer = styled(LinearGradient)<{ checked: boolean }>`
   width: 100px;
   height: 116px;
 
@@ -26,6 +26,8 @@ export const CardContainer = styled(LinearGradient)`
   justify-content: space-between;
 
   padding: 20px 0 20px 0;
+
+  opacity: ${({ checked }) => (checked ? 1 : 0.4)};
 `;
 
 export const Card = styled.View<{ checked: boolean }>`
