@@ -11,12 +11,14 @@ import {
 type Props = RectButtonProps & {
   title: string;
   icon: React.FC<SvgProps>;
+  hasCheckBox?: boolean;
   checked?: boolean;
 }
 
 export function Category({
   title,
   icon: Icon,
+  hasCheckBox = true,
   checked = true,
   ...rest
 }: Props): JSX.Element {
@@ -27,8 +29,13 @@ export function Category({
       <Gradient colors={[
         gradients.gradient50, gradients.gradient70]}
       >
-        <CardContainer style={{ opacity: checked ? 1 : 0.4 }}>
-          <Card checked={checked} />
+        <CardContainer
+          colors={[
+            checked ? gradients.gradient85 : gradients.gradient50, gradients.gradient40,
+          ]}
+          style={{ opacity: checked ? 1 : 0.4 }}
+        >
+          { hasCheckBox && <Card checked={checked} /> }
           <Icon width={48} height={48} />
           <Title>{title}</Title>
         </CardContainer>

@@ -16,36 +16,36 @@ export const Gradient = styled(LinearGradient)`
   margin-right: 8px;
 `;
 
-export const CardContainer = styled.View`
+export const CardContainer = styled(LinearGradient)`
   width: 100px;
   height: 116px;
 
-  background: ${({ theme }) => theme.colors.gradients.gradient40};
-
   border-radius: 8px;
 
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
-  padding: 7px 0 7px 0;
+  padding: 20px 0 20px 0;
 `;
 
 export const Card = styled.View<{ checked: boolean }>`
+  position: absolute;
+
+  top: ${({ checked }) => (checked === true ? 7 : 7)}px;
+  right: ${({ checked }) => (checked === true ? 7 : 7)}px;
+
   width: ${({ checked }) => (checked === true ? 10 : 12)}px;
   height: ${({ checked }) => (checked === true ? 10 : 12)}px;
 
-  background: ${({ checked, theme }) => (checked === true ? theme.colors.red : theme.colors.gradients.gradient50)};
+  background: ${({ checked, theme }) => (checked === true ? theme.colors.red : theme.colors.gradients.gradient80)};
 
-  align-self: flex-end;
-  margin-right: 7px;
-
-  border-color: ${({ checked, theme }) => (checked === true ? 'transparent' : theme.colors.gradients.gradient50)};
+  border-color: ${({ checked, theme }) => (checked === true ? 'transparent' : theme.colors.gradients.gradient80)};
   border-width: ${({ checked }) => (checked === true ? 0 : 2)}px;
-  border-radius: ${({ checked }) => (checked === true ? 0 : 3)}px;
+  border-radius: 3px;
 `;
 
 export const Title = styled.Text`
-  font-family: ${({ theme }) => theme.fonts.title500};
+  font-family: ${({ theme }) => theme.fonts.title700};
   font-size: 15px;
 
   color: ${({ theme }) => theme.colors.title}
