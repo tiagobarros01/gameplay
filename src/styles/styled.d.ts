@@ -9,6 +9,7 @@ declare module 'styled-components/native' {
         gradient100: string;
         gradient90: string;
         gradient80: string;
+        gradient85: string;
         gradient70: string;
         gradient60: string;
         gradient50: string;

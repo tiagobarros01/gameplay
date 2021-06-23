@@ -6,6 +6,7 @@ export default {
       gradient100: '#0A1033',
       gradient90: '#0D133D',
       gradient80: '#0E1647',
+      gradient85: '#171F52',
       gradient70: '#1B2565',
       gradient60: '#243189',
       gradient50: '#1D2766',
