@@ -3,7 +3,7 @@ import React from 'react';
 import DefaultTheme from '../../styles/themes/DefaultTheme';
 import { Gradient, AvatarImg } from './style';
 
-interface Props {
+type Props = {
   urlImage: string;
 }
 

@@ -8,7 +8,7 @@ import {
   Container, Gradient, CardContainer, Card, Title,
 } from './style';
 
-interface Props extends RectButtonProps {
+type Props = RectButtonProps & {
   title: string;
   icon: React.FC<SvgProps>;
   checked?: boolean;

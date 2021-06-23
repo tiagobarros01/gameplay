@@ -6,7 +6,7 @@ import {
   Wrapper, IconContainer, Icon, Info,
 } from './style';
 
-interface Props extends RectButtonProps {
+type Props = RectButtonProps & {
   title: string;
 }
 

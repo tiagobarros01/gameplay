@@ -6,7 +6,7 @@ import {
   Container,
 } from './style';
 
-interface Props {
+type Props = {
   categorySelected: string;
   setCategory: (categoryId: string) => void;
 }

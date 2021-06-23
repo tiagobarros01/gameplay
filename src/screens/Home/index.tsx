@@ -5,7 +5,7 @@ import { View } from 'react-native';
 import { ButtonAdd } from '../../components/ButtonAdd';
 import { CategorySelect } from '../../components/CategorySelect';
 import { Profile } from '../../components/Profile';
-import { Container, Header } from './style';
+import { Container, Header, Content } from './style';
 
 export default function Home(): JSX.Element {
   const [category, setCategory] = useState<string>('');
@@ -22,6 +22,8 @@ export default function Home(): JSX.Element {
       </Header>
       <View>
         <CategorySelect setCategory={handleCategorySelect} categorySelected={category} />
+
+        <Content />
       </View>
     </Container>
   );
